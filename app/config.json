@@ -1,5 +1,5 @@
 {
-  "serviceName": "Service name goes here",
+  "serviceName": "Applying for a Juggling License",
   "plugins": {
     "govuk-frontend": {
       "rebrand": true
