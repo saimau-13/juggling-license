@@ -19,14 +19,24 @@
       <h1 class="govuk-heading-l">
         What is your most impressive juggling trick?
       </h1>
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+{{ govukTextarea({
+  name: "moreDetail",
+  id: "more-detail",
+  label: {
+    classes: "govuk-label--l",
+    isPageHeading: true
+}
+}) }}
+
 
       <form class="form" action="/check-answers" method="post">
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
+       {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+
 
         {{ govukButton({
           text: "Continue"

@@ -19,14 +19,33 @@
       <h1 class="govuk-heading-l">
         How many balls can you juggle?
       </h1>
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "england",
+      text: "3 or more"
+    },
+    {
+      value: "scotland",
+      text: "1 or 2"
+    },
+    {
+      value: "wales",
+      text: "None - I cannot juggle"
+    }
+  ]
+}) }}
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="/juggling-trick" method="post">
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
+  
 
         {{ govukButton({
           text: "Continue"
